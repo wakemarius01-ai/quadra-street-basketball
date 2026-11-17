@@ -1,6 +1,8 @@
 # QUADRA — Street Basketball
 
-Jogo de basquete arcade em português, para navegador e Android: 1v1/2v2, bots em quatro níveis, barra de timing, drible e enterrada. No computador: WASD, Shift, Espaço (toque para iniciar e solte para arremessar), E (enterrar), Q (passe). No celular, use os controles na tela.
+Jogo arcade de basquete em 3D para navegador e Android: 1v1/2v2, bots em quatro níveis, barra de timing, drible, enterradas com salto e trajetória física, rebotes, aro e tabela com colisões. Roubo durante o drible derruba o defensor e mostra o aviso vermelho “ANKLE BREAKER”. Bots também driblam, roubam e podem ser fintados.
+
+No computador: WASD mover, Shift driblar, Espaço iniciar/soltar arremesso, E enterrar, F roubar, R bloquear e Q passe. No celular, use os controles na tela.
 
 ## Publicação
 
