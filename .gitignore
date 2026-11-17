@@ -1,0 +1,6 @@
+node_modules/
+android/
+.clasprc.json
+.clasp.json
+dist/
+.DS_Store

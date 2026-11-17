@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#090d18"><meta name="description" content="Racha 1v1 e 2v2: basquete arcade no navegador.">
+  <title>QUADRA — Street Basketball</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div class="brand"><span class="ball-mark">●</span><div><b>QUADRA</b><small>STREET BASKETBALL</small></div></div><div class="header-tag">ARCADE • 1–4 JOGADORES</div></header>
+    <section class="layout">
+      <aside class="panel setup">
+        <div class="eyebrow">MONTE SUA PARTIDA</div><h1>Domine a<br><em>quadra.</em></h1><p class="intro">Jogue no seu ritmo. Leia a defesa. Acerte o tempo.</p>
+        <label>FORMATO</label><div class="segmented"><button class="selected" data-mode="1">1 × 1</button><button data-mode="2">2 × 2</button></div>
+        <label for="difficulty">NÍVEL DOS BOTS</label><select id="difficulty"><option value="easy">Fácil</option><option value="medium" selected>Médio</option><option value="hard">Difícil</option><option value="expert">Expert</option></select>
+        <button id="start" class="start">JOGAR AGORA <span>↗</span></button>
+        <div class="controls"><div class="eyebrow">CONTROLES</div><p><kbd>WASD</kbd> mover <kbd>SHIFT</kbd> drible <kbd>ESPAÇO</kbd> arremessar<br><kbd>E</kbd> enterrada perto da cesta</p><small>No celular, use o direcional e os botões na tela.</small></div>
+      </aside>
+      <section class="game-area"><div class="scorebar"><div><span class="team-dot blue"></span> AZUL <b id="scoreA">0</b></div><div class="clock" id="clock">01:30</div><div><b id="scoreB">0</b> LARANJA <span class="team-dot orange"></span></div></div>
+        <div class="court-wrap"><canvas id="game" aria-label="Quadra de basquete"></canvas><div id="overlay" class="overlay"><div class="play-icon">▶</div><b>SUA QUADRA ESTÁ PRONTA</b><span>Escolha o formato e toque em jogar</span></div><div id="shotUI" class="shot-ui hidden"><div class="shot-caption">SOLTE NO VERDE!</div><div class="meter"><div class="zone red"></div><div class="zone orange-zone"></div><div class="zone green"></div><div class="zone orange-zone"></div><div class="zone red"></div><div id="needle"></div></div><small>Verde: cesta garantida&nbsp; • &nbsp;Laranja: chance&nbsp; • &nbsp;Vermelho: erro</small></div>
+        <div class="game-footer"><span id="status">Configure sua partida para começar</span><span>PRIMEIRO A 11 • VENCE POR 2</span></div>
+        <div class="mobile-controls"><button id="up">▲</button><button id="left">◀</button><button id="down">▼</button><button id="right">▶</button><button id="mobileDribble">DRIBLE</button><button id="mobileShoot">ARREMESSO</button><button id="mobileDunk">DUNK</button></div>
+      </section>
+    </section>
+    <footer><span>QUADRA © 2026</span><span>JOGO DE BASQUETE ARCADE</span></footer>
+  </main><script src="game.js"></script>
+</body></html>
