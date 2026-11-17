@@ -1,3 +1,4 @@
 **
 !apps-script/**
 !appsscript.json
+!.claspignore

@@ -16,4 +16,4 @@ O backend registra resultados em uma planilha Google. Em uma máquina com Node.j
 4. Copie o `.clasp.json` criado para a raiz do projeto, usando `rootDir: "apps-script"` e o Script ID informado pelo Google.
 5. `clasp push`, depois `clasp deploy --description "QUADRA match database"`.
 
-O endpoint web do Apps Script pode ser conectado quando houver um deployment ativo. A planilha é criada com a aba `Partidas` no primeiro resultado recebido.
+Depois de publicar como web app, configure a URL retornada na máquina do jogador (no console do navegador): `localStorage.setItem('quadraStatsEndpoint','URL_DO_WEB_APP')` e recarregue o jogo. O jogo enviará o placar ao fim de cada partida. A planilha é criada com a aba `Partidas` no primeiro resultado recebido.

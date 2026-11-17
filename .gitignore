@@ -3,4 +3,5 @@ android/
 .clasprc.json
 .clasp.json
 dist/
+www/
 .DS_Store
