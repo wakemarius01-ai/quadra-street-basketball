@@ -4,7 +4,7 @@ const canvas=document.querySelector('#game'),ui={overlay:document.querySelector(
 const difficulty={easy:{speed:3.15,defense:.24,accuracy:.43},medium:{speed:3.65,defense:.43,accuracy:.58},hard:{speed:4.1,defense:.68,accuracy:.72},expert:{speed:4.55,defense:.9,accuracy:.86}};
 const W=20,D=13,G=-9.8,clamp=(v,a,b)=>Math.max(a,Math.min(b,v)),rand=(a,b)=>a+Math.random()*(b-a),xz=(a,b)=>Math.hypot(a.x-b.x,a.z-b.z);
 let mode=1,players=[],score=[0,0],active=false,seconds=90,last=0,shot=null,keys={},dribbleHeld=false,calloutTimer=0,flash='',flashTimer=0,toastTimer=0,renderer,scene,camera,ballMesh,ballShadow,ball,hoops=[];
-const statsEndpoint=localStorage.getItem('quadraStatsEndpoint')||'';
+const statsEndpoint=localStorage.getItem('quadraStatsEndpoint')||'https://script.google.com/macros/s/AKfycbz1B8Gyf-9xTciocwBMNI0eAS9LYn_5sREcCYCSwk40imIZezDUz2aMH80M37hnY2dt/exec';
 const scene3d=makeScene();
 function makeScene(){
   try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.setSize(canvas.clientWidth,canvas.clientHeight,false);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;
