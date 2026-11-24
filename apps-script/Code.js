@@ -1,5 +1,14 @@
 /** Lightweight match log backend for QUADRA. Deploy as a web app with clasp. */
 var SPREADSHEET_ID='1ZIYpZ1ZEgSV1UGPLnXyMuwpJSy1QfC41jJxIfQPSsCI';
+function setupDatabase() {
+  var spreadsheet=SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet=spreadsheet.getSheetByName('Partidas');
+  if(!sheet){
+    sheet=spreadsheet.insertSheet('Partidas');
+    sheet.appendRow(['Data UTC','Formato','Dificuldade','Placar azul','Placar laranja','Vencedor']);
+  }
+  return 'Banco QUADRA pronto';
+}
 function doGet() {
   return json_({ok:true,service:'QUADRA stats',version:1});
 }
